@@ -1,0 +1,247 @@
+
+
+/*
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); // Black background with opacity 
+    z-index: 999; // Ensure it's above other content 
+}
+*/
+
+
+ .cookie-banner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 500px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center /*;z-index: 1000;*/
+}
+
+    .cookie-banner p {
+      margin: 0;
+    }
+
+    .cookie-banner .cookie-types {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .cookie-banner .cookie-types label {
+      margin-right: 10px;
+    }
+
+    .cookie-banner .toggle-switch {
+      display: inline-block;
+      position: relative;
+      width: 50px;
+      height: 25px;
+      background-color: #ccc;
+      border-radius: 25px;
+    }
+
+    .cookie-banner .toggle-switch input[type="checkbox"] {
+      display: none;
+    }
+
+    .cookie-banner .toggle-switch input[type="checkbox"]:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    .cookie-banner .toggle-switch .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      border-radius: 25px;
+      transition: background-color 0.3s;
+    }
+
+    .cookie-banner .toggle-switch .slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    .cookie-banner .toggle-switch input[type="checkbox"]:checked + .slider:before {
+      transform: translateX(25px);
+    }   
+      .cookie-banner .cookie-buttons {
+  margin-top: 10px;
+}
+
+.cookie-banner .cookie-buttons button {
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.cookie-banner .cookie-buttons .allow-all-button {
+  background-color: blue;
+  color: white;
+}
+/*general
+-------------------------------------------------------------------------*/
+body{
+  background-color:linen;
+  color:DARKSLATEGRAY;
+ }
+header{
+  background: PAPAYAWHIP;
+ }
+footer{
+  background: ANTIQUEWHITE;
+ }
+aside {
+  width: 30%;
+  padding-left: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-right: 25px;
+  float: right;
+  font-weight: lighter;
+  background-color: LIGHTPINK;
+  }
+/*type
+-------------------------------------------------------------------------*/
+li{
+font-family: fantasy;
+  }
+
+table, th, td{
+  border:solid 1px pink;
+  background-color:white;
+      }
+i {
+  color:grey;}
+  a{color:MIDNIGHTBLUE}
+  a:hover{text-decoration:none;
+  }
+  h1{
+    font-size: 100px;
+    margin-left: 320px;
+    text-shadow: 3px 3px 5px darkgrey;
+  }
+  h2{
+    font-size: 30px;
+    border: inset;
+    border-radius: 10px;
+    margin-left: 450px;
+    margin-right:450px;
+}
+time{
+font-stretch: extra-expanded;
+margin-left: 50px;
+}
+
+/*class
+------------------------------------------------------------------------*/
+
+.however{
+  padding-left: 350px;
+  margin:10px;
+    }
+.link a{
+  background-color: lightgrey;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 40px;
+  margin:400px;
+}
+.link a:hover{
+  background-color:rgba(211,211,211,50%);
+  }
+.navbar{
+  border-radius: 5px;
+  padding-left: 700px;
+  padding-right: 600px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+ background-color: PEACHPUFF;
+}
+.centruotas{
+  text-align: center;
+
+}
+.navigation{
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 100px;
+  padding-right: 600px;
+ background-color: PEACHPUFF;
+}
+.content-wrap{
+  width: 1200px;
+  margin: 0 110px;
+  padding-left : 999px;
+  text-align: justify;
+  border-style: groove;
+  background-color: rgba(222, 191, 113);
+
+
+
+}
+.youtubeplayer{
+background-color:
+rgb(191, 95, 86);
+padding-left: 100px;
+padding-right: 120px;
+padding-top: 50px;
+padding-bottom: 40px;
+margin-left: 300px;
+margin-right: 800px;
+}
+.aside{
+
+  margin-bottom: 300px;
+}
+.list{
+  background-color: pink;
+  width: 280px;
+  padding: 30px;
+}
+
+.header3{
+  padding-left: 450px;
+}
+.center{
+  padding-left: 450px;
+  padding-right: 450px;
+}
+.equipment
+{
+  background-color: rgb(222, 186, 212);
+float: right;
+padding: 20px;
+}
+/*id
+---------------------------------------------------------------------------*/
+#teachingjob{
+    background-color:LIGHTGREY;
+    border-style: groove;
+    margin-left: 100px;
+    margin-right: 1050px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    }
