@@ -1,4 +1,6 @@
-# demo_website
+# web playground
+This is a very fake ecommece website to play around w GA, GTM, dataLayers and what not
+Works well with the web data playground tool here: https://github.com/elenanesimm/the_fairy_codemother
 
 CONFIGURATION STEPS:
 
