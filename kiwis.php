@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" type="text/css" href="FairyStyleSheet.css">
    
-    <script src="/demo_website/analytics.js"></script>
+    <script src="/web_playground/analytics.js"></script>
     <script type="text/javascript">
         try {
             //simulate returning users
@@ -31,7 +31,7 @@
             console.log(e);
         }
     </script>
-    <script src="/demo_website/consent_update.js"></script>
+    <script src="/web_playground/consent_update.js"></script>
 </head>
 
 <body>
@@ -41,7 +41,7 @@
 	
 	
 	 <p>Click to second page?</p>
-	 <a href="/demo_website/kiwis/1.php">Yes</a>
+	 <a href="/web_playground/kiwis/1.php">Yes</a>
 
 <div class="cookie-banner" id="cookie-banner">
 
