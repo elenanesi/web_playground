@@ -12,7 +12,8 @@ Works well with the web data playground tool here: https://github.com/elenanesim
 
 4) In the file "analytics.js":
 	1) Change the GTM ID at the second line of the script, with your own GTM ID: const GTM_ID = "GTM-ABCDEFGH"
-	2) Change the GA stream ID at the 3rd line of the script with your own GA ID for the similation of retuning users
+	2) Change the GA stream ID at the 3rd line of the script with your own GA4 MEASUREMENT ID, for the similation of retuning users.
+	Skip the "G-" prefix
 	2) Change CoMo default as you see fit
 
 # FOR BEGINNERS:

@@ -1,7 +1,8 @@
-//Define GTM and GA stream IDs
-const GTM_ID = "GTM-ABCDEFG";
-const GA_STREAM_ID = "ABCDEFG";
-const ga_cookie_name = "_ga_"+GA_STREAM_ID;
+//Add your own GTM ID
+const GTM_ID = "GTM-ABCDEF";
+//Add your own GA measurement ID, skip the "G-" prefix
+const GA_MEASUREMENT_ID = "ABCDEFG";
+const ga_cookie_name = "_ga_"+GA_MEASUREMENT_ID;
 
 
 function getCookie(name) {
