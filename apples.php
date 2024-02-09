@@ -9,36 +9,32 @@
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
-	 <title>Apples</title>
+     <title>Apple category</title>
+
     <link rel="stylesheet" type="text/css" href="FairyStyleSheet.css">
-
-
-     <!-- set GA cookies to simulate returningUsers -->
-     <script src="/demo_project/returningUsers.js"></script>
-     <script src="/demo_project/consent.js"></script>
-    <script src="/demo_project/analytics.js"></script>
-        <script type="text/javascript">
-    window.onload = function() {
+   
+    <script src="/demo_website/analytics.js"></script>
+    <script type="text/javascript">
         try {
-            var clientIds = <?php echo json_encode($clientIds); ?>;
-            var isReturningUser = Math.random() < 0.5; // 50% chance
-
-            if (isReturningUser && clientIds.length > 0) {
-                var randomClient = clientIds[Math.floor(Math.random() * clientIds.length)];
-                setCookie("_ga", randomClient._ga, 365);
-                setCookie("_ga_1L1YW7SZFP", randomClient._ga_1L1YW7SZFP, 365);
-                                console.log("returning user", randomClient._ga)
-            }
+            //simulate returning users
+            //is the cookie already set? we want the simulation to happen on landing pages only
+            if (getCookie("cookie_consent")===null){
+                //get clientIds
+                var clientIds = <?php echo json_encode($clientIds); ?>;
+                //decide if returningUser
+                var isReturningUser = Math.random() < 0.5; // 50% chance
+                if (isReturningUser && clientIds.length > 0) 
+                returningUser(clientIds)
+            } 
         } catch(e) {
             console.log(e);
         }
-    };
-</script>
-
-
-
+    </script>
+    <script src="/demo_website/consent_update.js"></script>
 </head>
+
 <body>
 	<h1>Apples</h1>
 	<p>Find here our selection of apples</p>
@@ -46,7 +42,7 @@
 	
 	
 	 <p>Click to second page?</p>
-	 <a href="/demo_project/apples/1.php">Yes</a>
+	 <a href="/demo_website/apples/1.php">Yes</a>
 
 <div class="cookie-banner" id="cookie-banner">
 

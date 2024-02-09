@@ -12,48 +12,28 @@
 <head>
 	 <title>Apple 2</title>
 
-
-    <link rel="stylesheet" type="text/css" href="/demo_project/FairyStyleSheet.css">
-
-
-     <!-- set GA cookies to simulate returningUsers -->
-     <script src="/demo_project/returningUsers.js"></script>
-     <script src="/demo_project/consent.js"></script>
-    <script src="/demo_project/analytics.js"></script>
+    <link rel="stylesheet" type="text/css" href="FairyStyleSheet.css">
+   
+    <script src="/demo_website/analytics.js"></script>
     <script type="text/javascript">
-    window.onload = function() {
         try {
-            // Get the query string from the URL
-            const queryString = window.location.search;
-
-            // Use URLSearchParams to parse the query string
-            const urlParams = new URLSearchParams(queryString);
-            console.log("hello", urlParams, urlParams.has('utm_source'))
-
-            // Check if 'utm_source' parameter exists in the query string
-            if (urlParams.has('utm_source')){
-                console.log("hello")
+            //simulate returning users
+            //is the cookie already set? we want the simulation to happen on landing pages only
+            if (getCookie("cookie_consent")===null){
+                //get clientIds
                 var clientIds = <?php echo json_encode($clientIds); ?>;
+                //decide if returningUser
                 var isReturningUser = Math.random() < 0.5; // 50% chance
-                console.log("hello", clientIds)
-                if (isReturningUser && clientIds.length > 0) {
-                    var randomClient = clientIds[Math.floor(Math.random() * clientIds.length)];
-                    setCookie("_ga", randomClient._ga, 365);
-                    setCookie("_ga_1L1YW7SZFP", randomClient._ga_1L1YW7SZFP, 365);
-                    console.log("returning user", randomClient._ga)
-                }
-
-            }
-
+                if (isReturningUser && clientIds.length > 0) 
+                returningUser(clientIds)
+            } 
         } catch(e) {
             console.log(e);
         }
-    };
-</script>
-
-
-
+    </script>
+    <script src="/demo_website/consent_update.js"></script>
 </head>
+
 <body>
 	<h1>Apple 2</h1>
 	<p>PDP of Apple 2</p>
@@ -61,7 +41,7 @@
 	
 	
 	 <p>Click to second page?</p>
-	 <a href="/demo_project/apples/3.php">Yes</a>
+	 <a href="/demo_website/apples/3.php">Yes</a>
     
      <button class="cart" onclick=onclick="add_to_cart()">Add to Cart</button>
 
