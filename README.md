@@ -16,6 +16,13 @@ Works well with the web data playground tool here: https://github.com/elenanesim
 	Skip the "G-" prefix
 	2) Change CoMo default as you see fit
 
+5) In your GTM container, the simplest working setup is:
+- a Google tag set to fire at Consent initialization, 
+- a GA4 event tag with: 
+	- {{Event}} as event name
+	- ecommerce enabled (from dataLayer)
+	- activated by a custom event trigger that fires for all events, except the ones that contain "gtm" (eg: event name matches regex .+ ; exclude events that contain "gtm")
+
 # FOR BEGINNERS:
 
 - Install Git
