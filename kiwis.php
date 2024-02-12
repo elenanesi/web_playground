@@ -19,13 +19,13 @@
         try {
             //simulate returning users
             //is the cookie already set? we want the simulation to happen on landing pages only
-            if (getCookie("cookie_consent")===null){
+            var cookie_consent = getCookie("cookie_consent");
+            if (!cookie_consent){
                 //get clientIds
                 var clientIds = <?php echo json_encode($clientIds); ?>;
                 //decide if returningUser
                 var isReturningUser = Math.random() < 0.5; // 50% chance
-                if (isReturningUser && clientIds.length > 0) 
-                returningUser(clientIds)
+                if (isReturningUser && clientIds.length > 0) returningUser(clientIds)
             } 
         } catch(e) {
             console.log(e);

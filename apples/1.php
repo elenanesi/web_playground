@@ -1,11 +1,11 @@
 <?php
     $clientIds = [];
-    $filename = 'client_ids.json';
+    $filename = '/Applications/MAMP/htdocs/web_playground/client_ids.json';
 
     if (file_exists($filename)) {
         $jsonStr = file_get_contents($filename);
         $clientIds = json_decode($jsonStr, true);
-    }
+    } 
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,11 +17,13 @@
     <script src="/web_playground/analytics.js"></script>
     <script type="text/javascript">
         try {
+
             //simulate returning users
             //is the cookie already set? we want the simulation to happen on landing pages only
             if (getCookie("cookie_consent")===null){
                 //get clientIds
                 var clientIds = <?php echo json_encode($clientIds); ?>;
+                console.log("new",clientIds)
                 //decide if returningUser
                 var isReturningUser = Math.random() < 0.5; // 50% chance
                 if (isReturningUser && clientIds.length > 0) 

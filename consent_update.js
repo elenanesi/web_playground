@@ -5,7 +5,6 @@ try{
     if (!cookie_consent) { 
         //no consent has been given yet
         document.querySelector('.cookie-banner').style.display = 'block';
-        //document.querySelector('.overlay').style.display = 'block';
     } else {
         //consent has been given already, don't show the cookie banner
         document.querySelector('.cookie-banner').style.display = 'none';
@@ -27,7 +26,6 @@ try{
 
     }
   });
-  console.log('hey ele this is the cookie consent from cookies', cookie_consent)
 } catch(e) {console.log("Error w consent.js: ", e)}
 
 

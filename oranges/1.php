@@ -1,11 +1,11 @@
 <?php
     $clientIds = [];
-    $filename = 'client_ids.json';
+    $filename = '/Applications/MAMP/htdocs/web_playground/client_ids.json';
 
     if (file_exists($filename)) {
         $jsonStr = file_get_contents($filename);
         $clientIds = json_decode($jsonStr, true);
-    }
+    } 
 ?>
 <!DOCTYPE html>
 <html>
