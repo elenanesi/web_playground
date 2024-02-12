@@ -1,7 +1,7 @@
 //Add your own GTM ID
-const GTM_ID = "GTM-ABCDEF";
+const GTM_ID = "GTM-WZ4DNGJW";
 //Add your own GA measurement ID, skip the "G-" prefix
-const GA_MEASUREMENT_ID = "ABCDEFG";
+const GA_MEASUREMENT_ID = "1L1YW7SZFP";
 const ga_cookie_name = "_ga_"+GA_MEASUREMENT_ID;
 
 
@@ -20,14 +20,21 @@ function getCookie(name) {
 }
 
 function setCookie(name, value, days) {
+    var domain = window.location.hostname;
+    // Extract the main domain by removing subdomains, if any
+    var mainDomain = domain.includes('.') ? domain.substring(domain.lastIndexOf('.', domain.lastIndexOf('.') - 1) + 1) : domain;
+
     var expires = "";
     if (days) {
         var date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
         expires = "; expires=" + date.toUTCString();
     }
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+
+    // Include the domain in the cookie string
+    document.cookie = name + "=" + (value || "") + expires + "; path=/; domain=" + mainDomain;
 }
+
 
 function closePopup() { 
   var Popup = document.getElementById("cookie-banner");
@@ -45,7 +52,7 @@ function acceptAll(){
           'ad_personalization': 'granted',
           'analytics_storage': 'granted'
         });
-        setCookie("cookie_consent", "11")
+        setCookie("cookie_consent", "11", 365)
     };
 
 function denyAll(){
